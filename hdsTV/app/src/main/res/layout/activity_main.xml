@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        tools:ignore=",MissingConstraints"
+        >
+
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:id="@+id/tab_watch_tv"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="看电视"/>-->
+
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:id="@+id/movie"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="电影"-->
+<!--            />-->
+
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:id="@+id/variety"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="综艺"/>-->
+
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:id="@+id/sports"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="体育"-->
+<!--            />-->
+
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="动漫"/>-->
+
+    </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+    </androidx.viewpager.widget.ViewPager>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
