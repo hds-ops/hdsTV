@@ -15,12 +15,12 @@ import java.util.List;
 public class MyPagerAdapter extends PagerAdapter {
     private Context context;
     private List<String> titles;
-    private BaseFragment fragment;
+    private List<BaseFragment> fragmentList;
 
-    public MyPagerAdapter(Context context ,BaseFragment fragment ,List<String> titles ){
+    public MyPagerAdapter(Context context ,List<BaseFragment> fragments ,List<String> titles ){
         this.context = context;
         this.titles = titles;
-        this.fragment = fragment;
+        this.fragmentList = fragments;
     }
 
     @Override
@@ -37,12 +37,12 @@ public class MyPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
 
-        return fragment;
+        return fragmentList.get(position);
     }
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-//        super.destroyItem(container, position, object);
+        super.destroyItem(container, position, object);
         container.removeView((View) object);
     }
 
