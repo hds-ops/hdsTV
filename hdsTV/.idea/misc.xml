@@ -6,7 +6,14 @@
         <entry key="..\:/Git/hdsTV/app/src/main/res/layout/activity_main.xml" value="0.25987841945288753" />
         <entry key="..\:/Git/hdsTV/app/src/main/res/layout/fragment.xml" value="0.36644165863066536" />
         <entry key="..\:/Git/hdsTV/app/src/main/res/layout/fragment_base.xml" value="0.5536458333333333" />
+        <entry key="..\:/Git/hdsTV/app/src/main/res/layout/fragment_screen_slide_page.xml" value="0.27102330293819654" />
+        <entry key="..\:/Git/hdsTV/app/src/main/res/layout/horizontal_grid_view.xml" value="0.2682370820668693" />
+        <entry key="..\:/Git/hdsTV/app/src/main/res/layout/horizontal_item.xml" value="0.5536458333333333" />
+        <entry key="..\:/Git/hdsTV/app/src/main/res/layout/item_view.xml" value="0.2682370820668693" />
         <entry key="..\:/Git/hdsTV/app/src/main/res/layout/page.xml" value="0.2682370820668693" />
+        <entry key="..\:/Git/hdsTV/app/src/main/res/layout/vertical_grid_view.xml" value="0.5526041666666667" />
+        <entry key="..\:/Git/hdsTV/app/src/main/res/layout/vertical_item.xml" value="0.5536458333333333" />
+        <entry key="..\:/Git/hdsTV/app/src/main/res/layout/viewpager2.xml" value="0.270516717325228" />
       </map>
     </option>
   </component>
