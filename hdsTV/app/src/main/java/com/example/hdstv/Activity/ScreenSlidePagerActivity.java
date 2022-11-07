@@ -3,12 +3,15 @@ package com.example.hdstv.Activity;
 
 import static com.google.android.material.tabs.TabLayout.MODE_SCROLLABLE;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -32,12 +35,12 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
     private static final int NUM_PAGES = 15;
     private ViewPager2 viewPager;
     ScreenSlidePagerAdapter pagerAdapter;
-    TabLayout tabLayout;
+    private TabLayout tabLayout;
     Context mContext = this;
     private int currTabPosition;
     private static final String TAG = ScreenSlidePagerActivity.class.getSimpleName();
     private String[] tabTextList = {"电影","综艺","动漫","游戏","直播"};
-
+    private ScreenSlidePageFragment currentFragment;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -48,6 +51,7 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
         viewPager = findViewById(R.id.view_pager);
         tabLayout = findViewById(R.id.tab_layout);
         tabLayout.setTabMode(MODE_SCROLLABLE);
+        viewPager.setFocusable(false);
 
         pagerAdapter =new ScreenSlidePagerAdapter(this);
         viewPager.setAdapter(pagerAdapter);
@@ -75,6 +79,51 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
             }
         });
 
+        viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                super.onPageSelected(position);
+                currentFragment = (ScreenSlidePageFragment)getSupportFragmentManager().findFragmentByTag("f" + position);
+            }
+        });
+        addFocusChangeListener();
+    }
+
+    public TabLayout getTabLayout(){
+        return tabLayout;
+    }
+
+    private void addFocusChangeListener(){
+        tabLayout.getViewTreeObserver().addOnGlobalFocusChangeListener(new ViewTreeObserver.OnGlobalFocusChangeListener() {
+            @Override
+            public void onGlobalFocusChanged(View oldFocus, View newFocus) {
+                Log.d(TAG,"oldFocus: "+oldFocus+"  newFocus:"+newFocus);
+            }
+        });
+    }
+
+    @SuppressLint("RestrictedApi")
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        int action = event.getAction();
+        int keyCode = event.getKeyCode();
+        if(keyCode == KeyEvent.KEYCODE_DPAD_DOWN && tabLayout.hasFocus()){
+            currentFragment.getVerticalGridView().requestFocus();
+            return true;
+        }
+        if(keyCode == KeyEvent.KEYCODE_DPAD_RIGHT && tabLayout.hasFocus()){
+            if(currTabPosition<tabTextList.length-1){
+                TabLayout.Tab tab = tabLayout.getTabAt(currTabPosition+1);
+                Log.d(TAG, "dispatchKeyEvent: " + tab + "tabPosition: " + tab.getPosition());
+                tab.view.setSelected(true);
+
+            }
+
+        }
+        if(currentFragment != null){
+            currentFragment.dispatchKeyEvent(event);
+        }
+        return super.dispatchKeyEvent(event);
     }
 
     public int getCurrTabPosition(){

@@ -1,7 +1,6 @@
 package com.example.hdstv.adapter;
 
 import android.content.Context;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -9,8 +8,6 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.adapter.FragmentViewHolder;
 
-import com.example.hdstv.Activity.ScreenSlidePagerActivity;
-import com.example.hdstv.Creator;
 import com.example.hdstv.fragment.ScreenSlidePageFragment;
 
 import java.util.List;

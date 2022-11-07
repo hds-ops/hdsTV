@@ -4,6 +4,7 @@ package com.example.hdstv.fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,7 @@ public class ScreenSlidePageFragment extends Fragment {
     List<Poster.Resource> resources;
     ArrayObjectAdapter arrayObjectAdapter;
     int curTabPosition;
+    public static final int columns = 5;
     private static final String TAG = ScreenSlidePageFragment.class.getSimpleName();
 
     public ScreenSlidePageFragment(Context context){
@@ -64,7 +66,7 @@ public class ScreenSlidePageFragment extends Fragment {
 
     private void initView(View view){
         verticalGridView = view.findViewById(R.id.fragment_vertical_grid_view);
-        verticalGridView.setNumColumns(5);
+        verticalGridView.setNumColumns(columns);
         VerticalPresenter verticalPresenter = new VerticalPresenter();
         arrayObjectAdapter = new ArrayObjectAdapter(verticalPresenter);
 
@@ -74,6 +76,10 @@ public class ScreenSlidePageFragment extends Fragment {
         FocusHighlightHelper.setupHeaderItemFocusHighlight(bridgeAdapter);
     }
 
+
+    public VerticalGridView getVerticalGridView(){
+        return verticalGridView;
+    }
 
     private void initData(){
 
@@ -97,6 +103,16 @@ public class ScreenSlidePageFragment extends Fragment {
     private void selectData(int curPosition){
         resources = posters.get(curPosition).getResources();
         Log.d(TAG, "selectData: " + resources.toString());
+    }
+
+    public void dispatchKeyEvent(KeyEvent event){
+        int action = event.getAction();
+        int keyCode = event.getKeyCode();
+        Log.d(TAG,"fragAction:"+action+"   keyCode: "+keyCode +"   position: "+verticalGridView.getSelectedPosition());
+        if(verticalGridView.getSelectedPosition() < columns && keyCode == KeyEvent.KEYCODE_DPAD_UP){
+            Log.d(TAG,"dpad_up");
+            ((ScreenSlidePagerActivity)requireActivity()).getTabLayout().requestFocus();
+        }
     }
 
 
