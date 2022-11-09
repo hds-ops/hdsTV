@@ -36,8 +36,8 @@ public class ScreenSlidePageFragment extends Fragment {
     List<Poster> posters;
     List<Poster.Resource> resources;
     ArrayObjectAdapter arrayObjectAdapter;
-    int curTabPosition;
-    public static final int columns = 5;
+    public int curTabPosition;
+    public static final int COLUMNS = 5;
     private static final String TAG = ScreenSlidePageFragment.class.getSimpleName();
 
     public ScreenSlidePageFragment(Context context){
@@ -48,25 +48,21 @@ public class ScreenSlidePageFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_screen_slide_page,container,false);
-        curTabPosition = ((ScreenSlidePagerActivity)requireActivity()).getCurrTabPosition();
         initData();
-        selectData(curTabPosition);
         initView(view);
-        notifyData();
+        notifyData(curTabPosition);
         return view;
     }
 
     @Override
     public void onResume() {
         super.onResume();
-//        curTabPosition = ((ScreenSlidePagerActivity)requireActivity()).getCurrTabPosition();
-        Log.d(TAG,"  "+curTabPosition);
 
     }
 
     private void initView(View view){
         verticalGridView = view.findViewById(R.id.fragment_vertical_grid_view);
-        verticalGridView.setNumColumns(columns);
+        verticalGridView.setNumColumns(COLUMNS);
         VerticalPresenter verticalPresenter = new VerticalPresenter();
         arrayObjectAdapter = new ArrayObjectAdapter(verticalPresenter);
 
@@ -77,26 +73,23 @@ public class ScreenSlidePageFragment extends Fragment {
     }
 
 
-    public VerticalGridView getVerticalGridView(){
-        return verticalGridView;
-    }
 
     private void initData(){
-
         String json = StringUtils.readAssetsFile("home1.json", mContext);
         Gson gson = new Gson();
         Type type = new TypeToken<ArrayList<Poster>>(){}.getType();
         posters = gson.fromJson(json, type);
-
         Log.d("TAG", "initData: " + posters);
-
         resources = posters.get(curTabPosition).getResources();
         Log.d(TAG, "selectData: " + resources.toString());
     }
 
 
 
-    public void notifyData(){
+    public void notifyData(int currentPosition){
+        arrayObjectAdapter.clear();
+        this.curTabPosition = currentPosition;
+        selectData(currentPosition);
         arrayObjectAdapter.addAll(0,resources);
     }
 
@@ -105,14 +98,18 @@ public class ScreenSlidePageFragment extends Fragment {
         Log.d(TAG, "selectData: " + resources.toString());
     }
 
-    public void dispatchKeyEvent(KeyEvent event){
-        int action = event.getAction();
-        int keyCode = event.getKeyCode();
-        Log.d(TAG,"fragAction:"+action+"   keyCode: "+keyCode +"   position: "+verticalGridView.getSelectedPosition());
-        if(verticalGridView.getSelectedPosition() < columns && keyCode == KeyEvent.KEYCODE_DPAD_UP){
-            Log.d(TAG,"dpad_up");
-            ((ScreenSlidePagerActivity)requireActivity()).getTabLayout().requestFocus();
-        }
+//    public void dispatchKeyEvent(KeyEvent event){
+//        int action = event.getAction();
+//        int keyCode = event.getKeyCode();
+//        Log.d(TAG,"fragAction:"+action+"   keyCode: "+keyCode +"   position: "+verticalGridView.getSelectedPosition());
+//        if(verticalGridView.getSelectedPosition() < COLUMNS && keyCode == KeyEvent.KEYCODE_DPAD_UP){
+//            Log.d(TAG,"dpad_up");
+//            //((ScreenSlidePagerActivity)requireActivity()).getTabLayout().requestFocus();
+//        }
+//    }
+
+    public VerticalGridView getVerticalGridView(){
+        return verticalGridView;
     }
 
 

@@ -1,147 +1,98 @@
 package com.example.hdstv.Activity;
 
 
-import static com.google.android.material.tabs.TabLayout.MODE_SCROLLABLE;
-
 import android.annotation.SuppressLint;
-import android.content.Context;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.KeyEvent;
-import android.view.View;
-import android.view.ViewTreeObserver;
-import android.widget.Toast;
+import android.widget.FrameLayout;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
-import androidx.viewpager2.adapter.FragmentStateAdapter;
-import androidx.viewpager2.widget.ViewPager2;
+import androidx.leanback.widget.ArrayObjectAdapter;
+import androidx.leanback.widget.FocusHighlightHelper;
+import androidx.leanback.widget.ItemBridgeAdapter;
+import androidx.leanback.widget.OnChildViewHolderSelectedListener;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.hdstv.Presenter.TabViewPresenter;
 import com.example.hdstv.R;
-import com.example.hdstv.adapter.ScreenSlidePagerAdapter;
+import com.example.hdstv.View.TabView;
 import com.example.hdstv.fragment.ScreenSlidePageFragment;
-import com.google.android.material.tabs.TabLayout;
-import com.google.android.material.tabs.TabLayoutMediator;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ScreenSlidePagerActivity extends FragmentActivity {
-    private static final int NUM_PAGES = 15;
-    private ViewPager2 viewPager;
-    ScreenSlidePagerAdapter pagerAdapter;
-    private TabLayout tabLayout;
-    Context mContext = this;
-    private int currTabPosition;
-    private static final String TAG = ScreenSlidePagerActivity.class.getSimpleName();
-    private String[] tabTextList = {"电影","综艺","动漫","游戏","直播"};
-    private ScreenSlidePageFragment currentFragment;
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
+    private final String TAG = ScreenSlidePagerActivity.class.getSimpleName();
+
+    private TabView tabView;
+    private FrameLayout frameLayout;
+    ScreenSlidePageFragment screenSlidePageFragment;
+    private final String[] TITLES = {"电影","动漫","游戏","综艺","体育"};
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.viewpager2);
-
-        viewPager = findViewById(R.id.view_pager);
-        tabLayout = findViewById(R.id.tab_layout);
-        tabLayout.setTabMode(MODE_SCROLLABLE);
-        viewPager.setFocusable(false);
-
-        pagerAdapter =new ScreenSlidePagerAdapter(this);
-        viewPager.setAdapter(pagerAdapter);
-        TabLayoutMediator tabLayoutMediator = new TabLayoutMediator(tabLayout, viewPager, (tab, position) -> tab.setText(tabTextList[position]));
-        tabLayoutMediator.attach();
-        tabLayout.setFocusable(true);
-        tabLayout.setFocusableInTouchMode(true);
-
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                currTabPosition = tab.getPosition();
-                Log.d(TAG,"tabPosition: "+currTabPosition);
-                Toast.makeText(mContext, "TAG " + tab.getPosition(), Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
-
-        viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-                currentFragment = (ScreenSlidePageFragment)getSupportFragmentManager().findFragmentByTag("f" + position);
-            }
-        });
-        addFocusChangeListener();
+        setContentView(R.layout.main_activity);
+        tabView = findViewById(R.id.tabView);
+        frameLayout = findViewById(R.id.container);
+        initView();
     }
 
-    public TabLayout getTabLayout(){
-        return tabLayout;
-    }
-
-    private void addFocusChangeListener(){
-        tabLayout.getViewTreeObserver().addOnGlobalFocusChangeListener(new ViewTreeObserver.OnGlobalFocusChangeListener() {
+    private void initView(){
+        initTabView();
+        screenSlidePageFragment = new ScreenSlidePageFragment(this);
+        getSupportFragmentManager().beginTransaction().replace(R.id.container,screenSlidePageFragment).commitAllowingStateLoss();
+        tabView.setOnChildViewHolderSelectedListener(new OnChildViewHolderSelectedListener() {
+            @SuppressLint("ResourceAsColor")
             @Override
-            public void onGlobalFocusChanged(View oldFocus, View newFocus) {
-                Log.d(TAG,"oldFocus: "+oldFocus+"  newFocus:"+newFocus);
+            public void onChildViewHolderSelected(RecyclerView parent, RecyclerView.ViewHolder child, int position, int subposition) {
+                super.onChildViewHolderSelected(parent, child, position, subposition);
+                screenSlidePageFragment.notifyData(position);
+
+
             }
+
         });
     }
+
+    private void initTabView(){
+        tabView.setHorizontalSpacing(50);
+        tabView.setGravity(Gravity.CENTER_VERTICAL);
+        TabViewPresenter tabViewPresenter = new TabViewPresenter(this);
+        ArrayObjectAdapter objectAdapter = new ArrayObjectAdapter(tabViewPresenter);
+        objectAdapter.addAll(0,transformTitles());
+        ItemBridgeAdapter bridgeAdapter = new ItemBridgeAdapter(objectAdapter);
+        tabView.setAdapter(bridgeAdapter);
+        tabView.requestFocus();
+        FocusHighlightHelper.setupHeaderItemFocusHighlight(bridgeAdapter);
+    }
+
+    private List<String> transformTitles(){
+        List<String> titles = new ArrayList<>();
+        for(int i=0;i<TITLES.length;i++){
+            titles.add(TITLES[i]);
+        }
+        return titles;
+    }
+
 
     @SuppressLint("RestrictedApi")
     @Override
     public boolean dispatchKeyEvent(KeyEvent event) {
         int action = event.getAction();
         int keyCode = event.getKeyCode();
-        if(keyCode == KeyEvent.KEYCODE_DPAD_DOWN && tabLayout.hasFocus()){
-            currentFragment.getVerticalGridView().requestFocus();
-            return true;
-        }
-        if(keyCode == KeyEvent.KEYCODE_DPAD_RIGHT && tabLayout.hasFocus()){
-            if(currTabPosition<tabTextList.length-1){
-                TabLayout.Tab tab = tabLayout.getTabAt(currTabPosition+1);
-                Log.d(TAG, "dispatchKeyEvent: " + tab + "tabPosition: " + tab.getPosition());
-                tab.view.setSelected(true);
-
-            }
-
-        }
-        if(currentFragment != null){
-            currentFragment.dispatchKeyEvent(event);
+        Log.d(TAG, "dispatchKeyEvent: " + screenSlidePageFragment.getVerticalGridView().getSelectedPosition() + " action " + action);
+        if(screenSlidePageFragment.getVerticalGridView().getSelectedPosition()<ScreenSlidePageFragment.COLUMNS
+                && keyCode == KeyEvent.KEYCODE_DPAD_UP && action == KeyEvent.ACTION_DOWN){
+//            Log.d(TAG, "dispatchKeyEvent: " + screenSlidePageFragment.getVerticalGridView().getSelectedPosition());
+            tabView.getChildAt(screenSlidePageFragment.curTabPosition).requestFocus();
         }
         return super.dispatchKeyEvent(event);
     }
-
-    public int getCurrTabPosition(){
-        return currTabPosition;
-    }
-
-
-    @Override
-    public void onBackPressed() {
-        if(viewPager.getCurrentItem() == 0){
-            super.onBackPressed();
-        }else{
-            viewPager.setCurrentItem(viewPager.getCurrentItem() - 1);
-        }
-    }
-
-
-
 
 
 }
