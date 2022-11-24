@@ -69,9 +69,9 @@ public class ScreenSlidePageFragment extends RowsSupportFragment {
         try {
             initData();
             initPresenterSelector();
-            initRecommendData();
             initPoster();
-            requestFirstChildFocus();
+            initRecommendData();
+            Log.d(TAG, "onViewCreated: " + getVerticalGridView().getChildAt(0));
         }catch (Exception e){
             e.printStackTrace();
             Log.d(TAG,"err: "+e.getMessage());
@@ -154,7 +154,7 @@ public class ScreenSlidePageFragment extends RowsSupportFragment {
 
 
     private void initRecommendData(){
-        Block<Recommend.ResourcesDTO> recommendDataBlock = new Block<>("推荐",recommendResources,6);
+        Block<Recommend.ResourcesDTO> recommendDataBlock = new Block<>("推荐",recommendResources,8);
         recommendDataBlock.createRows(presenterSelector);
         Log.d(TAG,"rowSize: "+recommendDataBlock.getRows());
         arrayObjectAdapter.addAll(0,recommendDataBlock.getRows());
@@ -186,7 +186,6 @@ public class ScreenSlidePageFragment extends RowsSupportFragment {
             }
         });
     }
-
 
 
 }

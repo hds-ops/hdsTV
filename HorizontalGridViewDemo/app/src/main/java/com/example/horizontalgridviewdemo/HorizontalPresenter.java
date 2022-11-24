@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.leanback.widget.Presenter;
 
+import com.bumptech.glide.Glide;
+
 public class HorizontalPresenter extends Presenter {
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent) {
@@ -18,7 +20,13 @@ public class HorizontalPresenter extends Presenter {
     @Override
     public void onBindViewHolder(Presenter.ViewHolder viewHolder, Object item) {
         ViewHolder holder = (ViewHolder) viewHolder;
-        holder.title.setText(item.toString());
+        Data data = (Data) item;
+        holder.title.setText((CharSequence) data.getSpeechTitle());
+        Glide.with(holder.img.getContext())
+                .load(((Data) item).getUrl())
+                .placeholder(R.drawable.ic_baseline_image_24)
+                .fallback(R.drawable.ic_baseline_image_24)
+                .into(holder.img);
     }
 
     @Override
@@ -29,13 +37,13 @@ public class HorizontalPresenter extends Presenter {
 
     class ViewHolder extends Presenter.ViewHolder{
 
-         TextView title;
-         ImageView img;
+         private TextView title;
+         private ImageView img;
 
         public ViewHolder(View view) {
             super(view);
-            title = view.findViewById(R.id.text_view);
-            img = view.findViewById(R.id.image_view);
+            title = view.findViewById(R.id.speech_title);
+            img = view.findViewById(R.id.picture);
         }
     }
 }

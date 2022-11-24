@@ -17,6 +17,7 @@ public class PosterPresenter extends Presenter {
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.vertical_item,parent,false);
+
         return new ResourceViewHolder(view);
     }
 
@@ -51,6 +52,19 @@ public class PosterPresenter extends Presenter {
             imageView = view.findViewById(R.id.picture);
             speechTitle = view.findViewById(R.id.speech_title);
             title = view.findViewById(R.id.title);
+             view.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                 @Override
+                 public void onFocusChange(View v, boolean hasFocus) {
+                     if(hasFocus){
+                         v.setScaleX(1.2f);
+                         v.setScaleY(1.2f);
+                     }else{
+                         v.setScaleX(1.0f);
+                         v.setScaleY(1.0f);
+                     }
+                 }
+             });
+
         }
     }
 }

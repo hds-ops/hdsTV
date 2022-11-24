@@ -4,6 +4,7 @@ package com.example.hdstv.Presenter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,6 +20,7 @@ public class RecommendPresenter extends Presenter {
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recommend_item,parent,false);
+
         return new RecommendViewHolder(view);
     }
 
@@ -54,6 +56,8 @@ public class RecommendPresenter extends Presenter {
             imageView = view.findViewById(R.id.recommend_picture);
             speechTitle = view.findViewById(R.id.recommend_speech_title);
             title = view.findViewById(R.id.recommend_title);
+
+
         }
     }
 }

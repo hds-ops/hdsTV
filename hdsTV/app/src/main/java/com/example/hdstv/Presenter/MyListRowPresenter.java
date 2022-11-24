@@ -36,9 +36,9 @@ public class MyListRowPresenter extends ListRowPresenter {
     protected void onBindRowViewHolder(RowPresenter.ViewHolder holder, Object item) {
         super.onBindRowViewHolder(holder, item);
         HorizontalGridView itemRecyclerView = ((ListRowPresenter.ViewHolder)holder).getGridView();
-        itemRecyclerView.setFocusDrawingOrderEnabled(true);
+        /*itemRecyclerView.setFocusDrawingOrderEnabled(true);
 
-        itemRecyclerView.setFocusScrollStrategy(BaseGridView.FOCUS_SCROLL_ITEM);
+        itemRecyclerView.setFocusScrollStrategy(BaseGridView.FOCUS_SCROLL_ITEM);*/
 
         //根据item类型添加不同的间距类型
         RowConfig config = getRowConfig(item);

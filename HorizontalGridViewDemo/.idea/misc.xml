@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Git/HorizontalGridViewDemo/app/src/main/res/drawable/ic_baseline_image_24.xml" value="0.1515" />
         <entry key="..\:/Git/HorizontalGridViewDemo/app/src/main/res/layout/activity_main.xml" value="0.5536458333333333" />
+        <entry key="..\:/Git/HorizontalGridViewDemo/app/src/main/res/layout/horizontal_item.xml" value="0.5536458333333333" />
         <entry key="..\:/Git/HorizontalGridViewDemo/app/src/main/res/layout/item.xml" value="0.20428462127008415" />
       </map>
     </option>
