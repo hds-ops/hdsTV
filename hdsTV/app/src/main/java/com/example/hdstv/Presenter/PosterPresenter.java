@@ -3,6 +3,7 @@ package com.example.hdstv.Presenter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnticipateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -11,7 +12,6 @@ import androidx.leanback.widget.Presenter;
 import com.bumptech.glide.Glide;
 import com.example.hdstv.R;
 import com.example.hdstv.bean.Poster;
-import com.example.hdstv.bean.RecommendData;
 
 public class PosterPresenter extends Presenter {
     @Override
@@ -55,13 +55,8 @@ public class PosterPresenter extends Presenter {
              view.setOnFocusChangeListener(new View.OnFocusChangeListener() {
                  @Override
                  public void onFocusChange(View v, boolean hasFocus) {
-                     if(hasFocus){
-                         v.setScaleX(1.2f);
-                         v.setScaleY(1.2f);
-                     }else{
-                         v.setScaleX(1.0f);
-                         v.setScaleY(1.0f);
-                     }
+                     float scale = hasFocus ? 1.1f : 1.0f;
+                     v.animate().scaleX(scale).scaleY(scale).setInterpolator(new AnticipateInterpolator()).setDuration(200);
                  }
              });
 

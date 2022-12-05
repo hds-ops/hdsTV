@@ -4,7 +4,7 @@ package com.example.hdstv.Presenter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.AccelerateInterpolator;
+import android.view.animation.AnticipateInterpolator;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,9 +12,7 @@ import androidx.leanback.widget.Presenter;
 
 import com.bumptech.glide.Glide;
 import com.example.hdstv.R;
-import com.example.hdstv.bean.Poster;
 import com.example.hdstv.bean.Recommend;
-import com.example.hdstv.bean.RecommendData;
 
 public class RecommendPresenter extends Presenter {
     @Override
@@ -56,8 +54,13 @@ public class RecommendPresenter extends Presenter {
             imageView = view.findViewById(R.id.recommend_picture);
             speechTitle = view.findViewById(R.id.recommend_speech_title);
             title = view.findViewById(R.id.recommend_title);
-
-
+            view.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+                @Override
+                public void onFocusChange(View v, boolean hasFocus) {
+                    float scale = hasFocus ? 1.1f : 1.0f;
+                    v.animate().scaleX(scale).scaleY(scale).setInterpolator(new AnticipateInterpolator()).setDuration(300);
+                }
+            });
         }
     }
 }

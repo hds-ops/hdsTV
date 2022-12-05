@@ -105,13 +105,18 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
             Log.d(TAG, "dispatchKeyEvent: " + screenSlidePageFragment.getVerticalGridView().getSelectedPosition());
             tabView.getChildAt(screenSlidePageFragment.curTabPosition).requestFocus();
         }
-        if(tabView.hasFocus() && keyCode == KeyEvent.KEYCODE_DPAD_DOWN && action == KeyEvent.ACTION_DOWN){
-            View childAt = verticalGridView.getChildAt(0);
-            if(childAt != null){
+
+
+        if(tabView.hasFocus() && keyCode == KeyEvent.KEYCODE_DPAD_DOWN){
+            Log.d(TAG,"VHChildAt0: "+verticalGridView.getChildAt(0));
+            View v = ViewUtils.findTargetView(verticalGridView.getChildAt(0), HorizontalGridView.class);
+            Log.d(TAG,"findHV: "+v);
+            if(v instanceof HorizontalGridView){
+                View childAt = ((HorizontalGridView) v).getChildAt(0);
+                Log.d(TAG,"childAt: "+childAt);
                 childAt.requestFocus();
                 return true;
             }
-            Log.d(TAG, "dispatchKeyEvent: tabView -> first HorizontalGridView");
         }
         Log.d(TAG, "dispatchKeyEvent: selectPosition: " + verticalGridView.getSelectedPosition());
 

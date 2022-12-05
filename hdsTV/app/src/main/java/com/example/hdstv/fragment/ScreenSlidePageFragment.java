@@ -22,7 +22,6 @@ import com.example.hdstv.Presenter.RecommendPresenter;
 import com.example.hdstv.bean.Block;
 import com.example.hdstv.bean.Poster;
 import com.example.hdstv.bean.Recommend;
-import com.example.hdstv.bean.RecommendData;
 import com.example.hdstv.bean.RowConfig;
 import com.example.hdstv.utils.StringUtils;
 import com.google.gson.Gson;
@@ -82,7 +81,7 @@ public class ScreenSlidePageFragment extends RowsSupportFragment {
     private MyListRowPresenter initMyListRowPresenter() {
         MyListRowPresenter presenter = new MyListRowPresenter();
         presenter.addRowConfig(Poster.class, new RowConfig(new RowConfig.RowMargin(-8, 0), 4, 0));
-        presenter.addRowConfig(RecommendData.class, new RowConfig(new RowConfig.RowMargin(47,40), 7,0));
+        presenter.addRowConfig(Recommend.class, new RowConfig(new RowConfig.RowMargin(47,40), 7,0));
 
         mHeaderPresenter = new MyHeaderPresenter(mContext);
         presenter.setHeaderPresenter(mHeaderPresenter);
@@ -100,15 +99,12 @@ public class ScreenSlidePageFragment extends RowsSupportFragment {
     }
 
 
-
-
     private void initData(){
         String posterJson = StringUtils.readAssetsFile("home1.json", mContext);
-        String recommendJson = StringUtils.readAssetsFile("ApplicationContentBean.json",mContext);
+        String recommendJson = StringUtils.readAssetsFile("recommend.json",mContext);
         Gson gson = new Gson();
         Type type = new TypeToken<ArrayList<Poster>>(){}.getType();
         posters = gson.fromJson(posterJson, type);
-//        Gson gson1 = new Gson();
         Type type1 = new TypeToken<Recommend>(){}.getType();
         recommends = gson.fromJson(recommendJson,type1);
         Log.d(TAG, "initData: " + posters.toString());
@@ -132,19 +128,6 @@ public class ScreenSlidePageFragment extends RowsSupportFragment {
         Log.d(TAG, "selectData: " + posterResources.toString());
     }
 
-//    public void dispatchKeyEvent(KeyEvent event){
-//        int action = event.getAction();
-//        int keyCode = event.getKeyCode();
-//        Log.d(TAG,"fragAction:"+action+"   keyCode: "+keyCode +"   position: "+verticalGridView.getSelectedPosition());
-//        if(verticalGridView.getSelectedPosition() < COLUMNS && keyCode == KeyEvent.KEYCODE_DPAD_UP){
-//            Log.d(TAG,"dpad_up");
-//            //((ScreenSlidePagerActivity)requireActivity()).getTabLayout().requestFocus();
-//        }
-//    }
-
-//    public VerticalGridView getVerticalGridView(){
-//        return verticalGridView;
-//    }
 
     private void initPresenterSelector(){
         presenterSelector = new ClassPresenterSelector();
@@ -154,38 +137,22 @@ public class ScreenSlidePageFragment extends RowsSupportFragment {
 
 
     private void initRecommendData(){
-        Block<Recommend.ResourcesDTO> recommendDataBlock = new Block<>("推荐",recommendResources,8);
+        Block<Recommend.ResourcesDTO> recommendDataBlock = new Block<>(null,recommendResources,8);
         recommendDataBlock.createRows(presenterSelector);
         Log.d(TAG,"rowSize: "+recommendDataBlock.getRows());
         arrayObjectAdapter.addAll(0,recommendDataBlock.getRows());
         Log.d(TAG, "initRecommendData: " + recommendDataBlock.getRows());
-
     }
 
     private void initPoster(){
         Log.d(TAG, "initPoster: ");
-        Block<Poster.Resource> posterBlock = new Block<>("海报", posterResources,5);
+        Block<Poster.Resource> posterBlock = new Block<>(null, posterResources,6);
         posterBlock.createRows(presenterSelector);
         arrayObjectAdapter.addAll(0,posterBlock.getRows());
         Log.d(TAG, "initPoster: "+posterBlock.getRows());
 
     }
 
-    private void requestFirstChildFocus() {
-        mUiHandler.post(new Runnable() {
-            @Override
-            public void run() {
-                if (getVerticalGridView() != null) {
-                    Log.d(TAG, "run: " + getVerticalGridView().getChildAt(0));
-                    View view = getVerticalGridView().getChildAt(0);
-                    if (view != null) {
-                        view.requestFocus();
-                        FocusHighlightHelper.setupHeaderItemFocusHighlight(new ItemBridgeAdapter());
-                    }
-                }
-            }
-        });
-    }
 
 
 }
