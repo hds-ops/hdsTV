@@ -1,0 +1,944 @@
+{
+  "error_code": 1000,
+  "layout_publish_time": 1670313602032,
+  "layout_id": 1948,
+  "tabs": [
+    {
+      "waterfallFlowLayoutId": 1948,
+      "tab_id": 85075,
+      "height": 533,
+      "active": true,
+      "name": "体育精选",
+      "editable": true,
+      "display": true,
+      "movable": false,
+      "row": 8,
+      "column": 24,
+      "space": [
+        0.0208333,
+        0.037037
+      ],
+      "block_size": [
+        0.016493056,
+        0.029320987
+      ],
+      "blocks": [
+        {
+          "block_id": 1221575,
+          "grid_xy": [
+            0,
+            0,
+            11,
+            4
+          ],
+          "around": [
+            -1,
+            -1,
+            1221579,
+            1221576
+          ],
+          "latest_time": 1633920882000,
+          "layout_signature": "c2d21b0e7d7ede7dc6283f2602c2c737",
+          "display_type": 4,
+          "control": false,
+          "resources": [{
+            "res_id": 106016,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/fcb4c40f4b4c497cb8af848f55e87587.png?md5=be4cb05fff85b4e9959b0e435d86f7ba",
+            "action_url": {
+              "behavior": "activity",
+              "action": "com.tcl.vod.action.nbadetail",
+              "extra_map": [
+                {
+                  "key": "match_id",
+                  "type": "string",
+                  "value": "20245954"
+                },
+                {
+                  "key": "competition_id",
+                  "type": "string",
+                  "value": "100002"
+                },
+                {
+                  "key": "cateid",
+                  "type": "string",
+                  "value": "2"
+                },
+                {
+                  "key": "support_module",
+                  "type": "string",
+                  "value": "1"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "update_refer": "5*12推广位1:体育精选",
+            "speech_title": "NBA重播雄鹿魔术",
+            "statis_title": "NBA重播雄鹿魔术",
+            "statis_type": "默认",
+            "report_str": "waterfall_layout_sort=1|block_id=1221575|recommend_type=0",
+            "corner": [{
+              "id": "2",
+              "bg_url": "http://oss.launcher.tcloudfamily.com/posters/2aefb00e44474bdf9183a924bdcd72ec.png?md5=9247344b305e4c5f47c7590a71ccc29e",
+              "display_on_focus": 0,
+              "style_near_edge": 1
+            }],
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 4,
+            "integrate_upgrade_flag": 0,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 1,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        },
+        {
+          "block_id": 1221576,
+          "grid_xy": [
+            0,
+            5,
+            3,
+            7
+          ],
+          "around": [
+            -1,
+            1221575,
+            1221577,
+            -1
+          ],
+          "latest_time": 1633920882000,
+          "layout_signature": "7d7bd5b14fdce73b7f0e07cb12cfbcec",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 90612,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/800ce12ce62b46e1873d03284adf0393.png?md5=58d3b1dedd317656f196adf0d87364cd",
+            "action_url": {
+              "behavior": "activity",
+              "package_name": "com.tcl.vod",
+              "activity_name": "com.tcl.vod.sports.activity.SportListActivity",
+              "extra_map": [
+                {
+                  "key": "channe_name",
+                  "type": "string",
+                  "value": "NBA"
+                },
+                {
+                  "key": "channe_id",
+                  "type": "string",
+                  "value": "nba"
+                },
+                {
+                  "key": "competitionId",
+                  "type": "string",
+                  "value": "100000"
+                },
+                {
+                  "key": "select_type",
+                  "type": "string",
+                  "value": "2003"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "update_refer": "3*4推广位1:体育精选",
+            "speech_title": "NBA赛程表",
+            "statis_title": "NBA赛程表",
+            "statis_type": "默认",
+            "report_str": "waterfall_layout_sort=1|block_id=1221576|recommend_type=0",
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 1,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 1,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        },
+        {
+          "block_id": 1221577,
+          "grid_xy": [
+            4,
+            5,
+            7,
+            7
+          ],
+          "around": [
+            1221576,
+            -1,
+            1221578,
+            -1
+          ],
+          "latest_time": 1633920882000,
+          "layout_signature": "8d792b46d58412a085b352686410393a",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 100244,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/f57217827e694ee28a5990c9bff11bd0.png?md5=1ed19df09b11811b3a4794f18b1bc2c7",
+            "action_url": {
+              "behavior": "activity",
+              "action": "com.tcl.vod.action.nbalist",
+              "extra_map": [
+                {
+                  "key": "competitionId",
+                  "type": "string",
+                  "value": "208"
+                },
+                {
+                  "key": "teamName",
+                  "type": "string",
+                  "value": "中超"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "update_refer": "3*4推广位2:体育精选",
+            "speech_title": "中超赛程",
+            "statis_title": "中超赛程",
+            "statis_type": "默认",
+            "report_str": "waterfall_layout_sort=1|block_id=1221577|recommend_type=0",
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 0,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 1,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        },
+        {
+          "block_id": 1221578,
+          "grid_xy": [
+            8,
+            5,
+            11,
+            7
+          ],
+          "around": [
+            1221577,
+            1221575,
+            1221580,
+            -1
+          ],
+          "latest_time": 1633920882000,
+          "layout_signature": "5c12064a356800f4d4c625c156aec3a1",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 102193,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/f2664542aa6a46c6bf611b2d0fec4bf4.png?md5=681cee511a959bcb328a618ebb48ba9f",
+            "action_url": {
+              "behavior": "activity",
+              "action": "com.tcl.vod.action.nbalist",
+              "extra_map": [
+                {
+                  "key": "competitionId",
+                  "type": "string",
+                  "value": "22"
+                },
+                {
+                  "key": "teamName",
+                  "type": "string",
+                  "value": "德甲"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "update_refer": "3*4推广位3:体育精选",
+            "speech_title": "德甲赛程",
+            "statis_title": "德甲赛程",
+            "statis_type": "默认",
+            "report_str": "waterfall_layout_sort=1|block_id=1221578|recommend_type=0",
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 0,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 1,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        },
+        {
+          "block_id": 1221579,
+          "grid_xy": [
+            12,
+            0,
+            23,
+            4
+          ],
+          "around": [
+            1221575,
+            -1,
+            -1,
+            1221580
+          ],
+          "latest_time": 1633920882000,
+          "layout_signature": "66e2632ceaf2865e4a45ba91bf6481c6",
+          "display_type": 4,
+          "control": false,
+          "resources": [{
+            "res_id": 106066,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/d1c8c93444dc4eada272c51afb324655.png?md5=858821b4ddda739957738999707df980",
+            "action_url": {
+              "behavior": "activity",
+              "action": "com.tcl.vod.action.cyberui.detail",
+              "extra_map": [
+                {
+                  "key": "licenceId",
+                  "type": "int",
+                  "value": "15"
+                },
+                {
+                  "key": "play_type",
+                  "type": "string",
+                  "value": "1"
+                },
+                {
+                  "key": "lch_videoid",
+                  "type": "string",
+                  "value": "mzc00200v2fwbwu"
+                },
+                {
+                  "key": "lch_coverid",
+                  "type": "string"
+                },
+                {
+                  "key": "action",
+                  "type": "string",
+                  "value": "1"
+                },
+                {
+                  "key": "videoId",
+                  "type": "string",
+                  "value": "mzc00200v2fwbwu"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "update_refer": "5*12推广位2:体育精选",
+            "speech_title": "NBA常规赛：凯尔特人116-110猛龙",
+            "statis_title": "NBA常规赛：凯尔特人116-110猛龙",
+            "statis_type": "默认",
+            "vid": "mzc00200v2fwbwu",
+            "licence_id": "101",
+            "report_str": "waterfall_layout_sort=1|block_id=1221579|recommend_type=0",
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 4,
+            "integrate_upgrade_flag": 0,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 1,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        },
+        {
+          "block_id": 1221580,
+          "grid_xy": [
+            12,
+            5,
+            17,
+            7
+          ],
+          "around": [
+            1221578,
+            1221579,
+            1221581,
+            -1
+          ],
+          "latest_time": 1633920882000,
+          "layout_signature": "e8676d8b33160cf6ee4c630d37195f29",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 69785,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/b1095d2588ed4799907ccab0f8c54545.webp?md5=a433977dc951284c9bc515246be13151",
+            "action_url": {
+              "behavior": "activity",
+              "action": "com.tcl.action.subject.label",
+              "package_name": "com.tcl.subject",
+              "extra_map": [
+                {
+                  "key": "topic",
+                  "type": "int",
+                  "value": "9511"
+                },
+                {
+                  "key": "topic_name",
+                  "type": "String",
+                  "value": "体育全部赛事（腾讯＋爱奇艺）"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "update_refer": "3*6推广位1:体育精选",
+            "speech_title": "体育全部赛事（腾讯＋爱奇艺）",
+            "statis_title": "体育全部赛事（腾讯＋爱奇艺）",
+            "statis_type": "默认",
+            "report_str": "waterfall_layout_sort=1|block_id=1221580|recommend_type=0",
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 0,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 1,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        },
+        {
+          "block_id": 1221581,
+          "grid_xy": [
+            18,
+            5,
+            23,
+            7
+          ],
+          "around": [
+            1221580,
+            1221579,
+            -1,
+            -1
+          ],
+          "latest_time": 1633920882000,
+          "layout_signature": "19fb52c97cb1e78ac42308dc1c4f0676",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 105121,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/96013025c9824003938d11d7a7663a6f.webp?md5=009c7794d9a0dec9c5062eadadcbbf7c",
+            "action_url": {
+              "behavior": "activity",
+              "action": " com.tcl.vod.action.webpay",
+              "package_name": "com.tcl.vod",
+              "activity_name": "com.tcl.vod.userandpay.view.VodWebPayActivity",
+              "extra_map": [
+                {
+                  "key": "launchType",
+                  "type": "string",
+                  "value": "external_packageBuy"
+                },
+                {
+                  "key": "combo",
+                  "type": "string",
+                  "value": "28"
+                },
+                {
+                  "key": "fromPackageName",
+                  "type": "string",
+                  "value": "com.tcl.cyberui.MainActivity"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "default_action_url": {
+              "behavior": "activity",
+              "action": "com.tcl.vod.action.active",
+              "extra_map": [
+                {
+                  "key": "from",
+                  "type": "string",
+                  "value": "launcher"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "update_refer": "3*6推广位2:体育精选",
+            "speech_title": "体育NBA会员开通页收银台",
+            "statis_title": "体育NBA会员开通页收银台",
+            "statis_type": "默认",
+            "report_str": "waterfall_layout_sort=1|block_id=1221581|recommend_type=0",
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 1,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 1,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        }
+      ],
+      "latest_time": 1633920882000,
+      "layout_signature": "ea45fba0b29c5077511cff7a80958c20",
+      "tab_shape": 0,
+      "large_tabname": false,
+      "tab_note": "%5B10%3A53%3A03%5D",
+      "power_on_default": false,
+      "order_num": 10,
+      "real_time_request": true,
+      "layout_type": 0,
+      "pick_color": 0,
+      "enable_flow_info": 0,
+      "flow_info_num": 5,
+      "i18n_url": "http://oss.launcher.tcloudfamily.com/waterfall_1948/4f0e19f9cc1046beadfdf568ad33f866.zip?md5=35ae79d6a81b026bc70ebc69d77ccaae",
+      "title": {
+        "display_type": "text",
+        "value": "#599"
+      },
+      "default_title": {
+        "display_type": "text",
+        "value": "体育精选"
+      },
+      "is_display_pic": "0",
+      "speech_title": "体育精选",
+      "waterfall_layout_id": 1948,
+      "publish_time": 1653463450000,
+      "autoTab": 0,
+      "tab_refresh": 0
+    },
+    {
+      "waterfallFlowLayoutId": 1948,
+      "tab_id": 85076,
+      "height": 246,
+      "active": true,
+      "name": "体育精选",
+      "editable": true,
+      "display": true,
+      "movable": false,
+      "row": 2,
+      "column": 12,
+      "space": [
+        0.0208333,
+        0.037037
+      ],
+      "block_size": [
+        0.053819444,
+        0.095679015
+      ],
+      "blocks": [
+        {
+          "block_id": 1221582,
+          "grid_xy": [
+            0,
+            0,
+            2,
+            1
+          ],
+          "around": [
+            -1,
+            -1,
+            1221583,
+            -1
+          ],
+          "latest_time": 1633920882000,
+          "layout_signature": "38bf28bcc3b376d40cdc2840a05ac18e",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 106067,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/50f19048d7264cc685163e978a2a4bbb.webp?md5=1f02f7df021201f9663580f9a3f35d9f",
+            "action_url": {
+              "behavior": "activity",
+              "action": "com.tcl.vod.action.cyberui.detail",
+              "extra_map": [
+                {
+                  "key": "licenceId",
+                  "type": "int",
+                  "value": "15"
+                },
+                {
+                  "key": "play_type",
+                  "type": "string",
+                  "value": "1"
+                },
+                {
+                  "key": "lch_videoid",
+                  "type": "string",
+                  "value": "mzc00200hbgn26v"
+                },
+                {
+                  "key": "lch_coverid",
+                  "type": "string"
+                },
+                {
+                  "key": "action",
+                  "type": "string",
+                  "value": "1"
+                },
+                {
+                  "key": "videoId",
+                  "type": "string",
+                  "value": "mzc00200hbgn26v"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "update_refer": "2*3推广位1:体育精选",
+            "speech_title": "NBA常规赛：快船119-117黄蜂",
+            "statis_title": "NBA常规赛：快船119-117黄蜂",
+            "statis_type": "默认",
+            "vid": "mzc00200hbgn26v",
+            "licence_id": "101",
+            "report_str": "waterfall_layout_sort=2|block_id=1221582|recommend_type=0",
+            "download_type": 1,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 0,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 2,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        },
+        {
+          "block_id": 1221583,
+          "grid_xy": [
+            3,
+            0,
+            5,
+            1
+          ],
+          "around": [
+            1221582,
+            -1,
+            1221584,
+            -1
+          ],
+          "latest_time": 1633920882000,
+          "layout_signature": "5bd876bb827ccf9486cd520131595ed6",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 106087,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/0a357be52f0348bb82fce754983f5d99.webp?md5=db29ab33ecad88bee97a0d3d8208c9fe",
+            "action_url": {
+              "behavior": "activity",
+              "action": "com.tcl.vod.action.cyberui.detail",
+              "extra_map": [
+                {
+                  "key": "licenceId",
+                  "type": "int",
+                  "value": "15"
+                },
+                {
+                  "key": "play_type",
+                  "type": "string",
+                  "value": "1"
+                },
+                {
+                  "key": "lch_videoid",
+                  "type": "string",
+                  "value": "mzc002006n15og0"
+                },
+                {
+                  "key": "lch_coverid",
+                  "type": "string"
+                },
+                {
+                  "key": "action",
+                  "type": "string",
+                  "value": "1"
+                },
+                {
+                  "key": "videoId",
+                  "type": "string",
+                  "value": "mzc002006n15og0"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "update_refer": "2*3推广位2:体育精选",
+            "speech_title": "NBA常规赛：太阳111-130独行侠",
+            "statis_title": "NBA常规赛：太阳111-130独行侠",
+            "statis_type": "默认",
+            "vid": "mzc002006n15og0",
+            "licence_id": "101",
+            "report_str": "waterfall_layout_sort=2|block_id=1221583|recommend_type=0",
+            "download_type": 1,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 0,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 2,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        },
+        {
+          "block_id": 1221584,
+          "grid_xy": [
+            6,
+            0,
+            8,
+            1
+          ],
+          "around": [
+            1221583,
+            -1,
+            1221585,
+            -1
+          ],
+          "latest_time": 1633920882000,
+          "layout_signature": "57befba4e0b06fc4609ca8a0586c7dc7",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 105858,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/746e98cf60f247d2b4c779193e868c81.webp?md5=d7f9dc01c7fbba5bb307dc35dc5ac6c8",
+            "action_url": {
+              "behavior": "topic",
+              "action": "11645",
+              "extra_map": [
+                {
+                  "key": "topic_style",
+                  "type": "int",
+                  "value": "4"
+                },
+                {
+                  "key": "topic_name",
+                  "type": "String",
+                  "value": "世界杯《传奇转身》"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "update_refer": "2*3推广位3:体育精选",
+            "speech_title": "世界杯《传奇转身》",
+            "statis_title": "世界杯《传奇转身》",
+            "statis_type": "默认",
+            "report_str": "waterfall_layout_sort=2|block_id=1221584|recommend_type=0",
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 0,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 2,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        },
+        {
+          "block_id": 1221585,
+          "grid_xy": [
+            9,
+            0,
+            11,
+            1
+          ],
+          "around": [
+            1221584,
+            -1,
+            -1,
+            -1
+          ],
+          "latest_time": 1633920882000,
+          "layout_signature": "f2239668834a8d12fe7cd9b0b8afa8b9",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 105831,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/3e257b8f690145a4a0dcc83a09714fd2.webp?md5=90304abc1151c13ab34b00669be6cbb1",
+            "action_url": {
+              "behavior": "activity",
+              "action": "com.tcl.vod.action.cyberui.detail",
+              "extra_map": [
+                {
+                  "key": "licenceId",
+                  "type": "int",
+                  "value": "15"
+                },
+                {
+                  "key": "play_type",
+                  "type": "string",
+                  "value": "1"
+                },
+                {
+                  "key": "lch_videoid",
+                  "type": "string",
+                  "value": "mzc002008kw8p11"
+                },
+                {
+                  "key": "lch_coverid",
+                  "type": "string"
+                },
+                {
+                  "key": "action",
+                  "type": "string",
+                  "value": "1"
+                },
+                {
+                  "key": "videoId",
+                  "type": "string",
+                  "value": "mzc002008kw8p11"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "update_refer": "2*3推广位4:体育精选",
+            "speech_title": "WWE SmackDown 第1215期",
+            "statis_title": "WWE SmackDown 第1215期",
+            "statis_type": "默认",
+            "vid": "mzc002008kw8p11",
+            "licence_id": "101",
+            "report_str": "waterfall_layout_sort=2|block_id=1221585|recommend_type=0",
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 0,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 2,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        }
+      ],
+      "latest_time": 1633920882000,
+      "layout_signature": "92d6d0a5febdd0bae45d0cf8c0ef46bb",
+      "tab_shape": 0,
+      "large_tabname": false,
+      "tab_note": "%5B10%3A53%3A03%5D",
+      "power_on_default": false,
+      "order_num": 10,
+      "real_time_request": true,
+      "layout_type": 0,
+      "pick_color": 0,
+      "enable_flow_info": 0,
+      "flow_info_num": 5,
+      "i18n_url": "http://oss.launcher.tcloudfamily.com/waterfall_1948/4f0e19f9cc1046beadfdf568ad33f866.zip?md5=35ae79d6a81b026bc70ebc69d77ccaae",
+      "title": {
+        "display_type": "text",
+        "value": "#599"
+      },
+      "default_title": {
+        "display_type": "text",
+        "value": "体育精选"
+      },
+      "is_display_pic": "0",
+      "speech_title": "体育精选",
+      "waterfall_layout_id": 1948,
+      "publish_time": 1653463450000,
+      "autoTab": 0,
+      "tab_refresh": 0
+    }
+  ]
+}

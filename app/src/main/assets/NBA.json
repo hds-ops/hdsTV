@@ -1,0 +1,949 @@
+{
+  "error_code": 1000,
+  "layout_publish_time": 1670310000934,
+  "layout_id": 1945,
+  "tabs": [
+    {
+      "waterfallFlowLayoutId": 1945,
+      "tab_id": 85060,
+      "height": 533,
+      "active": true,
+      "name": "NBA专区",
+      "editable": true,
+      "display": true,
+      "movable": false,
+      "row": 4,
+      "column": 12,
+      "space": [
+        0.0208333,
+        0.037037
+      ],
+      "block_size": [
+        0.053819444,
+        0.095679015
+      ],
+      "blocks": [
+        {
+          "block_id": 1221405,
+          "grid_xy": [
+            0,
+            0,
+            5,
+            3
+          ],
+          "around": [
+            -1,
+            -1,
+            1221406,
+            -1
+          ],
+          "latest_time": 1633770012000,
+          "layout_signature": "fa9e48230e4c68b02debacf2c8602787",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 105296,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/0e38a4af23fe42098e7d97f26a23909c.png?md5=e0a3d0c5b5650a3c435b3af2d0f02c52",
+            "action_url": {
+              "behavior": "activity",
+              "package_name": "com.tcl.vod",
+              "activity_name": "com.tcl.vod.sports.activity.SportListActivity",
+              "extra_map": [
+                {
+                  "key": "channe_name",
+                  "type": "string",
+                  "value": "NBA"
+                },
+                {
+                  "key": "channe_id",
+                  "type": "string",
+                  "value": "nba"
+                },
+                {
+                  "key": "competitionId",
+                  "type": "string",
+                  "value": "100000"
+                },
+                {
+                  "key": "select_type",
+                  "type": "string",
+                  "value": "2003"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "update_refer": "4*6推广位1:NBA专区",
+            "speech_title": "NBA赛程表",
+            "statis_title": "NBA赛程表",
+            "statis_type": "默认",
+            "report_str": "waterfall_layout_sort=1|block_id=1221405|recommend_type=0",
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 1,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 1,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        },
+        {
+          "block_id": 1221406,
+          "grid_xy": [
+            6,
+            0,
+            8,
+            1
+          ],
+          "around": [
+            1221405,
+            -1,
+            1221408,
+            1221407
+          ],
+          "latest_time": 1633770012000,
+          "layout_signature": "cbdc9e59feca9caa3d74b0208acba316",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 105864,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/ca79aee392a547648377a66f124553dc.png?md5=1aea4c3575c8ee0e5118a7b97ed34d3d",
+            "action_url": {
+              "behavior": "activity",
+              "action": "com.tcl.vod.action.cyberui.detail",
+              "extra_map": [
+                {
+                  "key": "licenceId",
+                  "type": "int",
+                  "value": "15"
+                },
+                {
+                  "key": "play_type",
+                  "type": "string",
+                  "value": "1"
+                },
+                {
+                  "key": "lch_videoid",
+                  "type": "string",
+                  "value": "mzc003422hhqcqd"
+                },
+                {
+                  "key": "lch_coverid",
+                  "type": "string"
+                },
+                {
+                  "key": "action",
+                  "type": "string",
+                  "value": "1"
+                },
+                {
+                  "key": "videoId",
+                  "type": "string",
+                  "value": "mzc003422hhqcqd"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "update_refer": "2*3推广位1:NBA专区",
+            "speech_title": "解密黑曼巴",
+            "statis_title": "解密黑曼巴",
+            "statis_type": "默认",
+            "vid": "mzc003422hhqcqd",
+            "licence_id": "101",
+            "report_str": "waterfall_layout_sort=1|block_id=1221406|recommend_type=0",
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 0,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 1,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        },
+        {
+          "block_id": 1221407,
+          "grid_xy": [
+            6,
+            2,
+            8,
+            3
+          ],
+          "around": [
+            1221405,
+            1221406,
+            1221409,
+            -1
+          ],
+          "latest_time": 1633770012000,
+          "layout_signature": "8a46a2df6cc804d56c51ac05f12517f6",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 105239,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/69834297aa6a404199e74ea06c7b39af.png?md5=759194a0385a3a4ab205b2607f6bb0aa",
+            "action_url": {
+              "behavior": "activity",
+              "action": "com.tcl.vod.action.cyberui.detail",
+              "extra_map": [
+                {
+                  "key": "licenceId",
+                  "type": "int",
+                  "value": "15"
+                },
+                {
+                  "key": "play_type",
+                  "type": "string",
+                  "value": "1"
+                },
+                {
+                  "key": "lch_videoid",
+                  "type": "string",
+                  "value": "mzc003422hhqcqd"
+                },
+                {
+                  "key": "lch_coverid",
+                  "type": "string"
+                },
+                {
+                  "key": "action",
+                  "type": "string",
+                  "value": "1"
+                },
+                {
+                  "key": "videoId",
+                  "type": "string",
+                  "value": "mzc003422hhqcqd"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "update_refer": "2*3推广位2:NBA专区",
+            "speech_title": "解密黑曼巴",
+            "statis_title": "解密黑曼巴",
+            "statis_type": "默认",
+            "vid": "mzc003422hhqcqd",
+            "licence_id": "101",
+            "report_str": "waterfall_layout_sort=1|block_id=1221407|recommend_type=0",
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 0,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 1,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        },
+        {
+          "block_id": 1221408,
+          "grid_xy": [
+            9,
+            0,
+            11,
+            1
+          ],
+          "around": [
+            1221406,
+            -1,
+            -1,
+            1221409
+          ],
+          "latest_time": 1633770012000,
+          "layout_signature": "392203e432744189bcfd481543493766",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 105867,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/dc4a7bae32b742789c37da9b44bf7e79.png?md5=46218354b3108d5d65c7e9978fe7aff5",
+            "action_url": {
+              "behavior": "activity",
+              "action": "com.tcl.vod.action.cyberui.detail",
+              "extra_map": [
+                {
+                  "key": "licenceId",
+                  "type": "int",
+                  "value": "15"
+                },
+                {
+                  "key": "play_type",
+                  "type": "string",
+                  "value": "1"
+                },
+                {
+                  "key": "lch_videoid",
+                  "type": "string",
+                  "value": "mzc00200sw0kom8"
+                },
+                {
+                  "key": "lch_coverid",
+                  "type": "string"
+                },
+                {
+                  "key": "action",
+                  "type": "string",
+                  "value": "1"
+                },
+                {
+                  "key": "videoId",
+                  "type": "string",
+                  "value": "mzc00200sw0kom8"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "update_refer": "2*3推广位3:NBA专区",
+            "speech_title": "库里：我的故事",
+            "statis_title": "库里：我的故事",
+            "statis_type": "默认",
+            "vid": "mzc00200sw0kom8",
+            "licence_id": "101",
+            "report_str": "waterfall_layout_sort=1|block_id=1221408|recommend_type=0",
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 0,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 1,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        },
+        {
+          "block_id": 1221409,
+          "grid_xy": [
+            9,
+            2,
+            11,
+            3
+          ],
+          "around": [
+            1221407,
+            1221408,
+            -1,
+            -1
+          ],
+          "latest_time": 1633770012000,
+          "layout_signature": "90ba038a4c38f33353f7a2d4b2301506",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 105866,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/a9d2fe3617854e8eb1fd36d3a1a10ef3.webp?md5=094ca721ee15eb7c0896d160e6793b70",
+            "action_url": {
+              "behavior": "activity",
+              "action": "com.tcl.vod.action.cyberui.detail",
+              "extra_map": [
+                {
+                  "key": "licenceId",
+                  "type": "int",
+                  "value": "15"
+                },
+                {
+                  "key": "play_type",
+                  "type": "string",
+                  "value": "1"
+                },
+                {
+                  "key": "lch_videoid",
+                  "type": "string",
+                  "value": "mzc00200tbvnrij"
+                },
+                {
+                  "key": "lch_coverid",
+                  "type": "string"
+                },
+                {
+                  "key": "action",
+                  "type": "string",
+                  "value": "1"
+                },
+                {
+                  "key": "videoId",
+                  "type": "string",
+                  "value": "mzc00200tbvnrij"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "update_refer": "2*3推广位4:NBA专区",
+            "speech_title": "球星传",
+            "statis_title": "球星传",
+            "statis_type": "默认",
+            "vid": "mzc00200tbvnrij",
+            "licence_id": "101",
+            "report_str": "waterfall_layout_sort=1|block_id=1221409|recommend_type=0",
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 0,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 1,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        }
+      ],
+      "latest_time": 1633770012000,
+      "layout_signature": "c5381ad59fb7521c6b618db6fda439f3",
+      "tab_shape": 0,
+      "large_tabname": false,
+      "tab_note": "%E4%BD%93%E8%82%B2%E5%AD%90TAB",
+      "power_on_default": false,
+      "order_num": 20,
+      "real_time_request": true,
+      "layout_type": 0,
+      "pick_color": 0,
+      "enable_flow_info": 0,
+      "flow_info_num": 5,
+      "i18n_url": "http://oss.launcher.tcloudfamily.com/waterfall_1945/bd498e8c817545e694018927243a614b.zip?md5=9c74dda351f6548de1961b36c3ca18b1",
+      "title": {
+        "display_type": "text",
+        "value": "#600"
+      },
+      "default_title": {
+        "display_type": "text",
+        "value": "NBA专区"
+      },
+      "is_display_pic": "0",
+      "speech_title": "NBA专区",
+      "waterfall_layout_id": 1945,
+      "publish_time": 1653463417000,
+      "autoTab": 0,
+      "tab_refresh": 0
+    },
+    {
+      "waterfallFlowLayoutId": 1945,
+      "tab_id": 85061,
+      "height": 103,
+      "active": true,
+      "name": "NBA专区",
+      "editable": true,
+      "display": true,
+      "movable": false,
+      "row": 1,
+      "column": 12,
+      "space": [
+        0.0208333,
+        0.037037
+      ],
+      "block_size": [
+        0.053819444,
+        0.095679015
+      ],
+      "blocks": [
+        {
+          "block_id": 1221410,
+          "grid_xy": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "around": [
+            -1,
+            -1,
+            1221411,
+            -1
+          ],
+          "latest_time": 1633770012000,
+          "layout_signature": "9ca112e6895ead643bc87d4f74c2e47b",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 96582,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/5ca8684b7d9748bba232f50593b47cb2.png?md5=42b1243d66eeaaea7ce10f56d0a68114",
+            "action_url": {
+              "behavior": "activity",
+              "action": " com.tcl.vod.action.webpay",
+              "package_name": "com.tcl.vod",
+              "activity_name": "com.tcl.vod.userandpay.view.VodWebPayActivity",
+              "extra_map": [
+                {
+                  "key": "launchType",
+                  "type": "string",
+                  "value": "external_packageBuy"
+                },
+                {
+                  "key": "combo",
+                  "type": "string",
+                  "value": "28"
+                },
+                {
+                  "key": "fromPackageName",
+                  "type": "string",
+                  "value": "com.tcl.cyberui.MainActivity"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "default_action_url": {
+              "behavior": "activity",
+              "action": "com.tcl.vod.action.active",
+              "extra_map": [
+                {
+                  "key": "from",
+                  "type": "string",
+                  "value": "launcher"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "update_refer": "1*2推广位1:NBA专区",
+            "speech_title": "体育NBA会员开通页收银台",
+            "statis_title": "体育NBA会员开通页收银台",
+            "statis_type": "默认",
+            "report_str": "waterfall_layout_sort=2|block_id=1221410|recommend_type=0",
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 0,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 2,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        },
+        {
+          "block_id": 1221411,
+          "grid_xy": [
+            2,
+            0,
+            3,
+            0
+          ],
+          "around": [
+            1221410,
+            -1,
+            1221412,
+            -1
+          ],
+          "latest_time": 1633770012000,
+          "layout_signature": "39bc47cc5f20e2003df8360a2291479d",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 99280,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/5f418884b09843f6a2dc70b83962f818.png?md5=f664fbe32b1cac892fafdd87bc23e2d3",
+            "action_url": {
+              "behavior": "topic",
+              "action": "10816",
+              "extra_map": [
+                {
+                  "key": "topic_style",
+                  "type": "int",
+                  "value": "4"
+                },
+                {
+                  "key": "topic_name",
+                  "type": "String",
+                  "value": "NBA球星 谁是你心中的yyds"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "update_refer": "1*2推广位2:NBA专区",
+            "speech_title": "NBA球星 谁是你心中的yyds",
+            "statis_title": "NBA球星 谁是你心中的yyds",
+            "statis_type": "默认",
+            "report_str": "waterfall_layout_sort=2|block_id=1221411|recommend_type=0",
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 0,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 2,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        },
+        {
+          "block_id": 1221412,
+          "grid_xy": [
+            4,
+            0,
+            5,
+            0
+          ],
+          "around": [
+            1221411,
+            -1,
+            1221413,
+            -1
+          ],
+          "latest_time": 1633770012000,
+          "layout_signature": "65cba74ad436425450e00b549375248a",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 100435,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/ccdcdfc153304aa8b2755fa57798e1cd.png?md5=0168800ee4a0a2cd7c8253ae58c33243",
+            "action_url": {
+              "behavior": "topic",
+              "action": "11494",
+              "extra_map": [
+                {
+                  "key": "topic_style",
+                  "type": "int",
+                  "value": "4"
+                },
+                {
+                  "key": "topic_name",
+                  "type": "String",
+                  "value": "22/23赛季全景NBA"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "update_refer": "1*2推广位3:NBA专区",
+            "speech_title": "22/23赛季全景NBA",
+            "statis_title": "22/23赛季全景NBA",
+            "statis_type": "默认",
+            "report_str": "waterfall_layout_sort=2|block_id=1221412|recommend_type=0",
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 0,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 2,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        },
+        {
+          "block_id": 1221413,
+          "grid_xy": [
+            6,
+            0,
+            7,
+            0
+          ],
+          "around": [
+            1221412,
+            -1,
+            1221414,
+            -1
+          ],
+          "latest_time": 1633770012000,
+          "layout_signature": "1297559561d9c64af65843f5f2c4e250",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 91526,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/2aa78d24a1934d1f97008f0a9fc1a5d7.png?md5=5dc71b0eced78fa0ed4d3c3082caaf1a",
+            "action_url": {
+              "behavior": "activity",
+              "action": "com.tcl.vod.action.cyberui.detail",
+              "extra_map": [
+                {
+                  "key": "licenceId",
+                  "type": "int",
+                  "value": "15"
+                },
+                {
+                  "key": "play_type",
+                  "type": "string",
+                  "value": "1"
+                },
+                {
+                  "key": "lch_videoid",
+                  "type": "string",
+                  "value": "mzc00200bxjvzrb"
+                },
+                {
+                  "key": "lch_coverid",
+                  "type": "string"
+                },
+                {
+                  "key": "action",
+                  "type": "string",
+                  "value": "1"
+                },
+                {
+                  "key": "videoId",
+                  "type": "string",
+                  "value": "mzc00200bxjvzrb"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "default_action_url": {},
+            "update_refer": "1*2推广位4:NBA专区",
+            "speech_title": "NBA热点推荐",
+            "statis_title": "NBA热点推荐",
+            "statis_type": "默认",
+            "vid": "mzc00200bxjvzrb",
+            "licence_id": "101",
+            "report_str": "waterfall_layout_sort=2|block_id=1221413|recommend_type=0",
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 0,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 2,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        },
+        {
+          "block_id": 1221414,
+          "grid_xy": [
+            8,
+            0,
+            9,
+            0
+          ],
+          "around": [
+            1221413,
+            -1,
+            1221415,
+            -1
+          ],
+          "latest_time": 1633770012000,
+          "layout_signature": "a277658ccd2dcc8b0a932211ada02219",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 91516,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/e96ca346d2c24610ae9653894fb1b73e.png?md5=9d5c1419d9dde944beaceb723f25c884",
+            "action_url": {
+              "behavior": "topic",
+              "action": "10814",
+              "extra_map": [
+                {
+                  "key": "topic_style",
+                  "type": "int",
+                  "value": "4"
+                },
+                {
+                  "key": "topic_name",
+                  "type": "String",
+                  "value": "篮球纪录片 记录有趣的人物和事件"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "update_refer": "1*2推广位5:NBA专区",
+            "speech_title": "篮球纪录片 记录有趣的人物和事件",
+            "statis_title": "篮球纪录片 记录有趣的人物和事件",
+            "statis_type": "默认",
+            "report_str": "waterfall_layout_sort=2|block_id=1221414|recommend_type=0",
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 0,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 2,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        },
+        {
+          "block_id": 1221415,
+          "grid_xy": [
+            10,
+            0,
+            11,
+            0
+          ],
+          "around": [
+            1221414,
+            -1,
+            -1,
+            -1
+          ],
+          "latest_time": 1633770012000,
+          "layout_signature": "07d6fea93cd2f67cdd1e6580157704b8",
+          "display_type": 2,
+          "control": false,
+          "resources": [{
+            "res_id": 91515,
+            "title": [
+              "",
+              ""
+            ],
+            "type": "image",
+            "url": "http://oss.launcher.tcloudfamily.com/waterfallres/41e8696d36134f7e984f2e46096d426b.png?md5=29656fc5d37f52dfe1538f7a8bd049e8",
+            "action_url": {
+              "behavior": "topic",
+              "action": "10546",
+              "extra_map": [
+                {
+                  "key": "topic_style",
+                  "type": "int",
+                  "value": "4"
+                },
+                {
+                  "key": "topic_name",
+                  "type": "String",
+                  "value": "NBA两三事系列"
+                },
+                {
+                  "key": "reserves",
+                  "type": "string",
+                  "value": "ext"
+                }
+              ]
+            },
+            "name": "1_bg",
+            "update_refer": "1*2推广位6:NBA专区",
+            "speech_title": "NBA两三事系列",
+            "statis_title": "NBA两三事系列",
+            "statis_type": "默认",
+            "report_str": "waterfall_layout_sort=2|block_id=1221415|recommend_type=0",
+            "download_type": 2,
+            "title_on_focus": 0,
+            "display_type": 2,
+            "integrate_upgrade_flag": 0,
+            "higherAlgo": 0,
+            "subtitleConfig": 1
+          }],
+          "waterfall_layout_sort": 2,
+          "isrecommend": "0",
+          "recommendtype": "0"
+        }
+      ],
+      "latest_time": 1633770012000,
+      "layout_signature": "8ffc1e35fbcc3e2d93b53eaf8c307636",
+      "tab_shape": 0,
+      "large_tabname": false,
+      "tab_note": "%E4%BD%93%E8%82%B2%E5%AD%90TAB",
+      "power_on_default": false,
+      "order_num": 20,
+      "real_time_request": true,
+      "layout_type": 0,
+      "pick_color": 0,
+      "enable_flow_info": 0,
+      "flow_info_num": 5,
+      "i18n_url": "http://oss.launcher.tcloudfamily.com/waterfall_1945/bd498e8c817545e694018927243a614b.zip?md5=9c74dda351f6548de1961b36c3ca18b1",
+      "title": {
+        "display_type": "text",
+        "value": "#600"
+      },
+      "default_title": {
+        "display_type": "text",
+        "value": "NBA专区"
+      },
+      "is_display_pic": "0",
+      "speech_title": "NBA专区",
+      "waterfall_layout_id": 1945,
+      "publish_time": 1653463417000,
+      "autoTab": 0,
+      "tab_refresh": 0
+    }
+  ]
+}

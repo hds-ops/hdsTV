@@ -1,0 +1,133 @@
+{
+  "error_code": 1000,
+  "publish_id": "63",
+  "publish_name": "【4个】打底",
+  "resources": [
+    {
+      "res_id": 1420,
+      "url": "http://oss.launcher.tcloudfamily.com/app_page/b57798110e4f4600b4597d68bccaef4c.png?md5=e226c34abf4532bbcfeb75a64e715400",
+      "download_type": 2,
+      "action_type": 2,
+      "action_url": {
+        "behavior": "activity",
+        "package_name": "com.tcl.qiyiguo",
+        "activity_name": "com.gala.video.app.epg.HomeActivity"
+      },
+      "default_action_url": {
+        "behavior": "activity",
+        "package_name": "com.tcl.qiyiguo"
+      },
+      "title": [
+        "",
+        ""
+      ],
+      "speech_title": "奇异果TV",
+      "statis_title": "奇异果TV",
+      "statis_type": "1",
+      "licence_id": "0",
+      "type": "8",
+      "integrate_upgrade_flag": 0
+    },
+    {
+      "res_id": 1403,
+      "url": "http://oss.launcher.tcloudfamily.com/app_page/332760aaba25446c85e55364f4b49339.png?md5=a5b9318ec7e8cdc435c9ea5813f852b3",
+      "download_type": 2,
+      "action_type": 3,
+      "action_url": {
+        "behavior": "activity",
+        "action": "com.tcl.action.subject.grid",
+        "package_name": "com.tcl.subject",
+        "extra_map": [
+          {
+            "key": "topic",
+            "type": "int",
+            "value": "10677"
+          },
+          {
+            "key": "topic_name",
+            "type": "String",
+            "value": "芒果总内容页"
+          }
+        ]
+      },
+      "default_action_url": {
+        "behavior": "topic",
+        "action": "10677",
+        "extra_map": [
+          {
+            "key": "topic_style",
+            "type": "int",
+            "value": "13"
+          },
+          {
+            "key": "topic_name",
+            "type": "String",
+            "value": "芒果总内容页"
+          }
+        ]
+      },
+      "title": [
+        "",
+        ""
+      ],
+      "speech_title": "芒果TV",
+      "statis_title": "芒果总内容页",
+      "statis_type": "1",
+      "licence_id": "0",
+      "type": "3",
+      "integrate_upgrade_flag": 0
+    },
+    {
+      "res_id": 1418,
+      "url": "http://oss.launcher.tcloudfamily.com/app_page/98c75842dd3540b892f0415522739227.png?md5=3e65bd0adc459d333fcdc4651e465311",
+      "download_type": 2,
+      "action_type": 2,
+      "action_url": {
+        "behavior": "activity",
+        "action": "android.intent.action.VIEW",
+        "package_name": "com.cibn.tv",
+        "uri": "ykott://tv/home?from=tcl"
+      },
+      "default_action_url": {
+        "behavior": "activity",
+        "package_name": "com.cibn.tv"
+      },
+      "title": [
+        "",
+        ""
+      ],
+      "speech_title": "酷喵",
+      "statis_title": "酷喵",
+      "statis_type": "1",
+      "licence_id": "0",
+      "type": "8",
+      "integrate_upgrade_flag": 1
+    },
+    {
+      "res_id": 1433,
+      "url": "http://oss.launcher.tcloudfamily.com/app_page/4731d04ca59c435998c7f8830051e25c.png?md5=39a232e88d35247da0e16910d94ba3b1",
+      "download_type": 2,
+      "action_type": 2,
+      "action_url": {
+        "behavior": "activity",
+        "package_name": "com.ixigua.android.tv.wasu",
+        "activity_name": "com.ixigua.android.tv.module.home.view.MainActivity",
+        "uri": "snssdk1840://home/play_video?group_id=6755077164925714952"
+      },
+      "default_action_url": {
+        "behavior": "activity",
+        "package_name": "com.ixigua.android.tv.wasu"
+      },
+      "title": [
+        "",
+        ""
+      ],
+      "speech_title": "华数鲜时光",
+      "statis_title": "华数鲜时光",
+      "statis_type": "1",
+      "licence_id": "0",
+      "type": "8",
+      "integrate_upgrade_flag": 0
+    }
+  ]
+}

@@ -29,6 +29,8 @@ public class Recommend {
         private String speechTitle;
         @SerializedName("statis_title")
         private String statisTitle;
+        @SerializedName("package_name")
+        private String packageName;
 
         public Integer getResId() {
             return resId;
@@ -60,6 +62,14 @@ public class Recommend {
 
         public void setStatisTitle(String statisTitle) {
             this.statisTitle = statisTitle;
+        }
+
+        public String getPackageName() {
+            return packageName;
+        }
+
+        public void setPackageName(String packageName) {
+            this.packageName = packageName;
         }
 
         @Override

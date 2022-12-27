@@ -26,6 +26,7 @@ import com.example.hdstv.Presenter.TabViewPresenter;
 import com.example.hdstv.R;
 import com.example.hdstv.View.TabView;
 import com.example.hdstv.fragment.ScreenSlidePageFragment;
+import com.example.hdstv.utils.ContextUtils;
 import com.example.hdstv.utils.ViewUtils;
 
 import java.util.ArrayList;
@@ -43,6 +44,7 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ContextUtils.init(this.getApplication());
         setContentView(R.layout.main_activity);
 
         ConstraintLayout constraintLayout = findViewById(R.id.main_constraint_layout);
@@ -54,6 +56,11 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
         frameLayout = findViewById(R.id.container);
         initView();
         Log.d(TAG, "onCreate: " + tabView.hasFocus());
+
+
+        Log.d(TAG, "onCreate: getApplication: " + getApplication());
+        Log.d(TAG, "onCreate: getApplicationContext: " + getApplicationContext());
+        Log.d(TAG, "onCreate: getBaseContext: " + getBaseContext());
     }
 
     private void initView(){
@@ -117,6 +124,16 @@ public class ScreenSlidePagerActivity extends FragmentActivity {
                 childAt.requestFocus();
                 return true;
             }
+        }
+
+        if(tabView.hasFocus() && tabView.getSelectedPosition()!=0 && keyCode == KeyEvent.KEYCODE_BACK && action == KeyEvent.ACTION_DOWN){
+            tabView.getChildAt(0).requestFocus();
+            return true;
+        }
+
+        if(!tabView.hasFocus() && keyCode == KeyEvent.KEYCODE_BACK && action == KeyEvent.ACTION_DOWN){
+            tabView.getChildAt(screenSlidePageFragment.curTabPosition).requestFocus();
+            return true;
         }
         Log.d(TAG, "dispatchKeyEvent: selectPosition: " + verticalGridView.getSelectedPosition());
 

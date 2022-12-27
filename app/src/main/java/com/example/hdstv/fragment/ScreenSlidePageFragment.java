@@ -1,11 +1,19 @@
 package com.example.hdstv.fragment;
 
 
+import android.annotation.SuppressLint;
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,7 +22,10 @@ import androidx.leanback.widget.ArrayObjectAdapter;
 import androidx.leanback.widget.ClassPresenterSelector;
 import androidx.leanback.widget.FocusHighlightHelper;
 import androidx.leanback.widget.ItemBridgeAdapter;
+import androidx.leanback.widget.OnItemViewClickedListener;
 import androidx.leanback.widget.Presenter;
+import androidx.leanback.widget.Row;
+import androidx.leanback.widget.RowPresenter;
 
 import com.example.hdstv.Presenter.MyHeaderPresenter;
 import com.example.hdstv.Presenter.MyListRowPresenter;
@@ -26,6 +37,7 @@ import com.example.hdstv.bean.NBATeamsName;
 import com.example.hdstv.bean.Poster;
 import com.example.hdstv.bean.Recommend;
 import com.example.hdstv.bean.RowConfig;
+import com.example.hdstv.listener.ItemClickable;
 import com.example.hdstv.p.ComicData;
 import com.example.hdstv.p.GameData;
 import com.example.hdstv.p.MovieData;
@@ -63,6 +75,7 @@ public class ScreenSlidePageFragment extends RowsSupportFragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        Log.d("ScreenSlidePagerActivity", "onCreate: getContext" + getContext());
 
         initMyListRowPresenter();
         arrayObjectAdapter = new ArrayObjectAdapter(listRowPresenter);
@@ -125,9 +138,25 @@ public class ScreenSlidePageFragment extends RowsSupportFragment {
 
     private void initPresenterSelector(){
         presenterSelector = new ClassPresenterSelector();
-        presenterSelector.addClassPresenter(Recommend.ResourcesDTO.class,new RecommendPresenter());
+        presenterSelector.addClassPresenter(Recommend.ResourcesDTO.class,new RecommendPresenter(mContext));
         presenterSelector.addClassPresenter(Poster.Resource.class,new PosterPresenter());
         presenterSelector.addClassPresenter(NBATeamsName.ResourcesDTO.class,new SportsPresenter());
+
+        OnItemViewClickedListener mClickListener = new OnItemViewClickedListener() {
+            @Override
+            public void onItemClicked(Presenter.ViewHolder itemViewHolder, Object item, RowPresenter.ViewHolder rowViewHolder, Row row) {
+                if(item instanceof Recommend.ResourcesDTO){
+                    onRecommendClick((Recommend.ResourcesDTO)item);
+                }
+            }
+        };
+
+        for (Presenter p: presenterSelector.getPresenters()) {
+            if(p instanceof ItemClickable){
+                ((ItemClickable)p).setOnItemClickListener(mClickListener);
+            }
+        }
+
     }
 
 
@@ -176,6 +205,29 @@ public class ScreenSlidePageFragment extends RowsSupportFragment {
         westTeamBlock.createRows(presenterSelector);
         arrayObjectAdapter.addAll(0,westTeamBlock.getRows());
 
+    }
+
+    private void onRecommendClick(Recommend.ResourcesDTO recommend){
+        Log.d(TAG, "onRecommendClick: " + getAllApps().toString());
+        Intent intent = mContext.getPackageManager().getLaunchIntentForPackage(recommend.getPackageName());
+        if(intent != null){
+            mContext.startActivity(intent);
+        }else{
+            Toast.makeText(mContext, "没有下载该应用", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private List<PackageInfo> getAllApps(){
+        List<PackageInfo> apps = new ArrayList<>();
+        PackageManager packageManager = mContext.getPackageManager();
+        Intent mainIntent = new Intent(Intent.ACTION_MAIN, null);
+        mainIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+        @SuppressLint("QueryPermissionsNeeded") List<PackageInfo> appList = packageManager.getInstalledPackages(0);
+        for(PackageInfo packageInfo : appList){
+            Log.d(TAG, "getAllApps: " + packageInfo);
+        }
+
+        return apps;
     }
 
 }
